@@ -1,10 +1,3 @@
-#
-# Makefile
-#
-# Computer Science 50
-# Problem Set 3
-#
-
 all: find generate
 
 find: find.c helpers.c helpers.h

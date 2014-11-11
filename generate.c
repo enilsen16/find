@@ -1,17 +1,3 @@
-/**
- * generate.c
- *
- * Computer Science 50
- * Problem Set 3
- *
- * Generates pseudorandom numbers in [0,LIMIT), one per line.
- *
- * Usage: generate n [s]
- *
- * where n is number of pseudorandom numbers to print
- * and s is an optional seed
- */
-
 #include <cs50.h>
 #include <stdio.h>
 #include <stdlib.h>
