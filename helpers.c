@@ -6,15 +6,14 @@
  */
 bool search(int value, int values[], int n)
 {
-  if (n < 1) {
-    return false;
-  }
-  for (int i = 0; i <= n; i++) {
-      if (value == values[i]) {
-        return true;
-      }
-    }
-    return false;
+
+  //While length of list > 0
+    //Look at the middle
+    //If number found, return true
+    //Else if number is higher, search left
+    //Else if number is lower, search right
+  //Recursively repeat
+
 }
 
 /**
