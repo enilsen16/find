@@ -6,13 +6,10 @@
  */
 bool search(int value, int values[], int n)
 {
-        //While length of list > 0
         int min = 0;
         int max = n - 1;
         while ( max > min ) {
                 int mid = (max + min) / 2;
-                //Look at the middle
-                //If number found, return true
                 if (values[mid] == value)
                         return true;
                 if (values[mid] > value)
