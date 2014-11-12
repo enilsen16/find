@@ -6,24 +6,21 @@
  */
 bool search(int value, int values[], int n)
 {
-  //While length of list > 0
-    int min = 0;
-    int max = n - 1;
-  while ( max > min ) {
-    int mid = (max + min) / 2;
-    //Look at the middle
-    //If number found, return true
-    if (values[mid] == value) {
-      return true;
-    //Else if number is higher, search left
-  } else if ( values[mid] > value) {
-      max = mid - 1;
-    //Else if number is lower, search right
-  } else if (values[mid] < value) {
-      min = mid + 1;
-    }
-  }
-  return false;
+        //While length of list > 0
+        int min = 0;
+        int max = n - 1;
+        while ( max > min ) {
+                int mid = (max + min) / 2;
+                //Look at the middle
+                //If number found, return true
+                if (values[mid] == value)
+                        return true;
+                if (values[mid] > value)
+                        max = mid - 1;
+                if (values[mid] < value)
+                        min = mid + 1;
+        }
+        return false;
 }
 
 /**
@@ -31,14 +28,13 @@ bool search(int value, int values[], int n)
  */
 void sort(int values[], int n)
 {
-    // TODO: implement an O(n^2) sorting algorithm
-    for (int i = 1; i < n; i++) {
-      int j = i;
-      while (j > 0 && values[j] < values[j-1]) {
-        values[j] = values[j] + values[j-1];
-        values[j-1] = values[j] - values[j-1];
-        values[j] = values[j] - values[j-1];
-      j = j - 1;
-    }
-  }
+        for (int i = 1; i < n; i++) {
+                int j = i;
+                while (j > 0 && values[j] < values[j-1]) {
+                        values[j] = values[j] + values[j-1];
+                        values[j-1] = values[j] - values[j-1];
+                        values[j] = values[j] - values[j-1];
+                        j = j - 1;
+                }
+        }
 }
